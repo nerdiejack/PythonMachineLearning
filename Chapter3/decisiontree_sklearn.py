@@ -36,8 +36,8 @@ dot_data = export_graphviz(tree,
 graph = graph_from_dot_data(dot_data)
 graph.write_png('tree.png')
 
-forest = RandomForestClassifier(criterion='gini', n_estimators=100000,
-                                random_state=1, n_jobs=12)
+forest = RandomForestClassifier(criterion='gini', n_estimators=25,
+                                random_state=1, n_jobs=2)
 forest.fit(X_train, y_train)
 plot_decision_regions(X_combined, y_combined,
                       classifier=forest, test_idx=range(105, 150))
