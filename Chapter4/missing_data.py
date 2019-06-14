@@ -10,3 +10,4 @@ csv_data = \
 df = pd.read_csv(StringIO(csv_data))
 
 print(df.isnull().sum())
+print('test')
