@@ -107,5 +107,5 @@ plt.show()
 sfm = SelectFromModel(forest, threshold=0.05, prefit=True)
 X_selected = sfm.transform(X_train)
 print('Number of features that this threshold criterion:', X_selected.shape[1])
-for f in range (X_selected.shape[1]):
+for f in range(X_selected.shape[1]):
     print("%2d) %-*s %f" % (f + 1, 30, feat_labels[indices[f]], importances[indices[f]]))
